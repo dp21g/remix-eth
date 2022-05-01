@@ -25,6 +25,13 @@
 			},
 			{
 				"inputs": [],
+				"name": "createSimpleStorageContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "favNumber",
 				"outputs": [
 					{
@@ -96,6 +103,62 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
+						"name": "_simpleStorageIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "sfGet",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_simpleStorageIndex",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_simpleStorageNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "sfStore",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "simpleStorageArray",
+				"outputs": [
+					{
+						"internalType": "contract SimpleStorage",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
 						"name": "_favNumber",
 						"type": "uint256"
 					}
@@ -119,7 +182,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/SimpleStorage.sol": "SimpleStorage"
+			"contracts/StorageFactory.sol": "StorageFactory"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -139,6 +202,14 @@
 			"urls": [
 				"bzz-raw://d2b5b0b67db2244ba06ce5eac7ea7a70779b9fd94cf59a8841e20e21b7fe450f",
 				"dweb:/ipfs/QmUxLBCaEv6VLFmaVzv67zExXDo29PYqAR1ihPLcKthPsg"
+			]
+		},
+		"contracts/StorageFactory.sol": {
+			"keccak256": "0xd92537029d629656adb6babcee0dc03a41f2903826f7073944120d3a8af5cc06",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e9da9f7cd59a9ecf62315a70210c32bf949f4e9bcc833f38f95cdbc6726789d5",
+				"dweb:/ipfs/QmbuSKRnk2vFTheJWGHJPaDpdLknQFg3UnyqBzZqPe7n6B"
 			]
 		}
 	},

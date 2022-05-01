@@ -13,7 +13,7 @@ contract SimpleStorage {
 // public - all can access
 // external - Cannot be accessed internally, only externally
 // internal - only this contract and contracts deriving from it can access
-// private - can be accessed only from this contract
+// private - can be accessed only from this contrac
 
     struct People {
         uint256 favNumber;
@@ -30,7 +30,7 @@ contract SimpleStorage {
     }
     //view pure //blue colour as they don't change state
     function retrieve() public view returns(uint256) {
-        return favNumber + favNumber;
+        return favNumber;
     }
 
     //storing in memory means it will only stored during excution
