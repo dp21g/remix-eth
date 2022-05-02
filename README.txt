@@ -24,3 +24,29 @@ Output from script will appear in remix terminal.
 Please note, 'require' statement is supported in a limited manner for Remix supported modules.
 For now, modules supported by Remix are ethers, web3, swarmgw, chai, remix and hardhat only for hardhat.ethers object/plugin.
 For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE will be shown.'
+===
+# Add networks to metamask
+https://chainlist.org/
+## Price feed info
+https://docs.chain.link/docs/ethereum-addresses/
+
+# Notes
+Every Function call has a value "wei" "gwei" assoc. It basically states how much eth you are going to send.
+1 Wei is the smallest amount of eth.
+
+# Centralized ORacles are point of failure
+Decentralize your computation
+data.chain.link
+
+## Decimals
+decimals don't work in solidity
+2802.05998248 * 10 ** 8
+
+## Type casting is simple, just wrap It
+int256 to 256 by doing uint256(answer);
+
+## How to add a revert 
+require(getConversionRate(msg.value) >= minimumUSD, "You need to spend more ETH!, it should be more than 50");
+Use the modifier for withdrawing!     modifier onlyOwner {
+
+ 
