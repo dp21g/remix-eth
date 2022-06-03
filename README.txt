@@ -49,4 +49,5 @@ int256 to 256 by doing uint256(answer);
 require(getConversionRate(msg.value) >= minimumUSD, "You need to spend more ETH!, it should be more than 50");
 Use the modifier for withdrawing!     modifier onlyOwner {
 
- 
+# Diagram
+https://miro.com/app/board/uXjVO0gqWu0=/

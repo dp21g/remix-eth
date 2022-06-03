@@ -1,0 +1,27 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add @chainlink/contracts
+
+PATH: 
+  /Users/dp015035/.rvm/gems/ruby-2.6.3/bin:/Users/dp015035/.rvm/gems/ruby-2.6.3@global/bin:/Users/dp015035/.rvm/rubies/ruby-2.6.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/dp015035/opt/anaconda3/bin:/Users/dp015035/opt/anaconda3/condabin:/Users/dp015035/.rvm/gems/ruby-2.6.3/bin:/Users/dp015035/.rvm/gems/ruby-2.6.3@global/bin:/Users/dp015035/.rvm/rubies/ruby-2.6.3/bin:/Users/dp015035/.fig/bin:/Users/dp015035/.rvm/bin:/Users/dp015035/Library/Python/3.8/bin:/Users/dp015035/.local/bin:/Users/dp015035/.rvm/bin:/Users/dp015035/Library/Python/3.8/bin:/Users/dp015035/.local/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  10.24.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND cernerrepos.net cernerrepos.net:443
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

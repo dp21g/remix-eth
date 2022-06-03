@@ -1,26 +1,29 @@
-from gettext import translation
-from brownie import accounts, config, SimpleStorage, network
+from brownie import FundMe, MockV3Aggregator, network, config
+from scripts.helpful_scripts import (
+    get_account,
+    deploy_mocks,
+    LOCAL_BLOCKCHAIN_ENVIRONMENTS,
+)
 
 
-def deploy_simple_storage():
-    # account = accounts.add(config["wallets"]["from_key"])
+def deploy_fund_me():
     account = get_account()
-    simple_storage = SimpleStorage.deploy({"from": account})
-    # retrieve is a view function
-    stored_value = simple_storage.retrieve()
-    print("stored value =====", stored_value)
-    transaction = simple_storage.store(15, {"from": account})
-    transaction.wait(1)
-    updated_stored_value = simple_storage.retrieve()
-    print("updated_stored_value =====", updated_stored_value)
-
-
-def get_account():
-    if network.show_active() == "development":
-        return accounts[0]
+    if network.show_active() not in LOCAL_BLOCKCHAIN_ENVIRONMENTS:
+        price_feed_address = config["networks"][network.show_active()][
+            "eth_usd_price_feed"
+        ]
     else:
-        return accounts.add(config["wallets"]["from_key"])
+        deploy_mocks()
+        price_feed_address = MockV3Aggregator[-1].address
+
+    fund_me = FundMe.deploy(
+        price_feed_address,
+        {"from": account},
+        publish_source=config["networks"][network.show_active()].get("verify"),
+    )
+    print(f"Contract deployed to {fund_me.address}")
+    return fund_me
 
 
 def main():
-    deploy_simple_storage()
+    deploy_fund_me()
